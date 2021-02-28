@@ -18,7 +18,6 @@ const stylModuleRegex = /\.module\.styl$/;
 
 module.exports = () => {
   return {
-    mode: "development",
     entry: {
       index: './src/index.js'
     },
