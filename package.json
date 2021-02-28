@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack serve --config webpack.common.js"
   },
   "repository": {
@@ -24,6 +23,7 @@
   },
   "devDependencies": {
     "@babel/preset-react": "^7.12.13",
+    "autoprefixer": "^10.2.4",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.1.0",
     "html-webpack-plugin": "^5.2.0",
@@ -31,6 +31,8 @@
     "less-loader": "^8.0.0",
     "path": "^0.12.7",
     "postcss-loader": "^5.0.0",
+    "postcss-normalize": "^9.0.0",
+    "postcss-preset-env": "^6.7.0",
     "react-dev-utils": "^11.0.3",
     "resolve-url-loader": "^3.1.2",
     "sass-loader": "^11.0.1",

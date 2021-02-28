@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import image from './test.png';
 
 import './index.less';
 import less from './index.module.less';
@@ -14,6 +15,7 @@ ReactDOM.render(
     <div className={scss.scss}>scss</div>
     <div className={less.font}>less</div>
     <div className={stylus.stylus}>stylus</div>
+    <img src={image} />
   </React.StrictMode>,
   document.getElementById('root')
 );
