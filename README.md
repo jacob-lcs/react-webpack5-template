@@ -1,3 +1,9 @@
+---
+# 主题列表：juejin, github, smartblue, cyanosis, channing-cyan, fancy, hydrogen, condensed-night-purple, greenwillow, v-green, vue-pro, healer-readable, mk-cute, jzman, geek-black, awesome-green, qklhk-chocolate
+# 贡献主题：https://github.com/xitu/juejin-markdown-themes
+theme: smartblue
+highlight:
+---
 # 从零开始使用 webpack5 搭建 react 项目
 
 > 本文的示例项目源码可以点击 [这里](https://github.com/jacob-lcs/react-webpack5-template) 获取
@@ -104,7 +110,7 @@ module.exports = (env) => {
 }
 ```
 
-在 index.html 中写入以下代码：
+在 `index.html` 中写入以下代码：
 
 ```html
 <!DOCTYPE html>
@@ -119,7 +125,7 @@ module.exports = (env) => {
 </html>
 ```
 
-在 .babalrc 中写入以下代码：
+在 `.babalrc` 中写入以下代码：
 
 ```json
 {
@@ -138,7 +144,7 @@ module.exports = (env) => {
 
 随后我们运行 `npm run dev` 就可以直接运行了，由于我们上面设置的 devServer 端口号为 8080，所以在浏览器中打开 `localhost:8080` 即可看到如下效果：
 
-![image-20210228004846012](https://file.lcs.show/image/20210228004903.png)
+![image-20210228004846012](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8d2c643391e04c319548827e4adef444~tplv-k3u1fbpfcp-zoom-1.image)
 
 到这里位置，我们的初步搭建已经完成了，但是我们在现有的项目中看到的 webpack 配置文件不止这些，有 less、css 文件的解析，image 等资源文件的处理，还有一些优化项的配置等，接下来会一一介绍。
 
@@ -214,7 +220,7 @@ module.exports = {
 
 重新运行项目后发现样式生效，配置成功。
 
-![image-20210228102928287](https://file.lcs.show/image/20210228102930.png)
+![image-20210228102928287](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/134d33f3528d497d992855178aebce39~tplv-k3u1fbpfcp-zoom-1.image)
 
 但是仅配置 less 是不够的，我们日常在开发过程中经常用到 less module，在这里我们进行如下配置，首先安装 `react-dev-utils`：
 
@@ -265,7 +271,7 @@ module: {
 
 重新运行项目后样式生效，并且 className 也发生了相应变化：
 
-![image-20210228110624352](https://file.lcs.show/image/20210228110626.png)
+![image-20210228110624352](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/46a4750428ee451189eba42e090fe1cd~tplv-k3u1fbpfcp-zoom-1.image)
 
 CSS、SCSS 与 SASS 的配置都大同小异，大家可以移步到我的 [GitHub](https://github.com/jacob-lcs/react-webpack5-template)。
 
@@ -310,7 +316,7 @@ cache: {
   type: 'filesystem',
   // 可选配置
   buildDependencies: {
-    config: [__filename], // 当构建依赖的config文件（通过 require 依赖）内容发生变化时，缓存失效
+    config: [__filename],  // 当构建依赖的config文件（通过 require 依赖）内容发生变化时，缓存失效
   },
   name: 'development-cache',
 },
@@ -318,11 +324,25 @@ cache: {
 
 重新运行项目后会发现 node_modules 目录下会新增一个 .cache 文件夹：
 
-![image-20210228114440107](https://file.lcs.show/image/20210228114441.png)
+![image-20210228114440107](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/96572954a479431b8ab2051f8b46d98b~tplv-k3u1fbpfcp-zoom-1.image)
 
 笔者在实际项目中测试，热更新时间由原来的 8s 缩短到 2s 可以说是提升巨大。
+
+#### 4.2 引入多线程
+为了提升构建速度，我们可以引入 `thread-loader` 提升构建速度，首先我们需要安装：
+```bash
+npm i thread-loader -D
+```
+然后在 `webpack.common.js` 中进行配置：
+```diff
+{
+  test: /\.(jsx|js)?$/,
+- use: ["babel-loader"],
++ use: ["thread-loader", "babel-loader"],
+  include: path.resolve(__dirname, 'src'),
+},
+```      
 
 ## 五、总结
 
 到目前为止，配置工作算是已经完成了，本篇文章只是指导大家进行一些初始化配置，项目中肯定还有很多可以优化的地方，比如说分别配置 webpack.dev.js 以及 webpack.prod.js 以通过测试环境与正式环境的不同需求，在这里就不细说，环境区分的相关配置我会上传到 GitHub 中，如果你觉得项目对你有点用处的话，还请点个 star。
-

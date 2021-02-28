@@ -37,7 +37,7 @@ module.exports = () => {
       rules: [
         {
           test: /\.(jsx|js)?$/,
-          use: ["babel-loader"],
+          use: ["thread-loader", "babel-loader"],
           include: path.resolve(__dirname, 'src'),
         },
         {
