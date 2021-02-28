@@ -1,0 +1,34 @@
+{
+  "name": "react-webpack5-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack serve --config webpack.common.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacob-lcs/react-webpack5-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jacob-lcs/react-webpack5-template/issues"
+  },
+  "homepage": "https://github.com/jacob-lcs/react-webpack5-template#readme",
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.12.13",
+    "babel-loader": "^8.2.2",
+    "html-webpack-plugin": "^5.2.0",
+    "path": "^0.12.7",
+    "webpack": "^5.24.2",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
