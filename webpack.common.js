@@ -1,7 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const getCSSModuleLocalIdent = require("react-dev-utils/getCSSModuleLocalIdent");
-const WebpackBar = require("webpackbar");
 
 // css/css module 正则表达式
 const cssRegex = /\.css$/;
@@ -19,7 +18,6 @@ const stylModuleRegex = /\.module\.styl$/;
 module.exports = () => {
   return {
     mode: "development",
-    devtool: 'eval-source-map',
     entry: {
       index: './src/index.js'
     },
@@ -33,14 +31,12 @@ module.exports = () => {
         filename: "index.html",
         template: "./build/index.html",
       }),
-      // 显示打包进度
-      new WebpackBar(),
     ],
     module: {
       rules: [
         {
           test: /\.(jsx|js)?$/,
-          use: ["thread-loader", "babel-loader"],
+          use: ["babel-loader"],
           include: path.resolve(__dirname, 'src'),
         },
         {
@@ -140,11 +136,6 @@ module.exports = () => {
         config: [__filename],  // 当构建依赖的config文件（通过 require 依赖）内容发生变化时，缓存失效
       },
       name: 'development-cache',
-    },
-    resolve: {
-      alias: {
-        "@": path.resolve(__dirname, "src"),
-      },
     },
   }
 }
