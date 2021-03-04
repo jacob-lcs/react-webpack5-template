@@ -1,10 +1,12 @@
----
-# 主题列表：juejin, github, smartblue, cyanosis, channing-cyan, fancy, hydrogen, condensed-night-purple, greenwillow, v-green, vue-pro, healer-readable, mk-cute, jzman, geek-black, awesome-green, qklhk-chocolate
-# 贡献主题：https://github.com/xitu/juejin-markdown-themes
-theme: smartblue
-highlight:
----
 # 从零开始使用 webpack5 搭建 react 项目
+
+> 已集成功能
+> - [x] cache 缓存提升热更新速度
+> - [x] style module
+> - [x] lodash 按需加载
+> - [x] antd 按需加载
+> - [x] moment 去除多余语言包
+> 
 
 > 本文的示例项目源码可以点击 [这里](https://github.com/jacob-lcs/react-webpack5-template) 获取
 
@@ -299,7 +301,7 @@ webpack5 内置 assets 类型，我们不需要额外安装插件就可以进行
 ```javascript
 {
   test: /\.(jpe?g|png|gif|svg|woff|woff2|eot|ttf|otf)$/i,
-  type: "asset/resource",
+  type: "asset/resource"
 },
 ```
 
