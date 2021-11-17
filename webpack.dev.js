@@ -21,6 +21,6 @@ module.exports = env => {
     },
     optimization: {
       moduleIds: "deterministic",
-    }
+    },
   });
 }

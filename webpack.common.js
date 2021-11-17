@@ -21,6 +21,7 @@ module.exports = () => {
     entry: {
       index: './src/index.js'
     },
+    target: ['web', 'es5'],
     output: {
       // 打包文件根目录
       path: path.resolve(__dirname, "dist/"),
@@ -128,14 +129,6 @@ module.exports = () => {
           type: "asset/resource",
         },
       ]
-    },
-    cache: {
-      type: 'filesystem',
-      // 可选配置
-      buildDependencies: {
-        config: [__filename],  // 当构建依赖的config文件（通过 require 依赖）内容发生变化时，缓存失效
-      },
-      name: 'development-cache',
     },
   }
 }
