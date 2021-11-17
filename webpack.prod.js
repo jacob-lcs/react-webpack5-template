@@ -1,6 +1,5 @@
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common.js');
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const MomentLocalesPlugin = require('moment-locales-webpack-plugin');
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
@@ -13,10 +12,9 @@ module.exports = env => {
     mode: 'production',
     output: {
       filename: "js/[name].[contenthash].js",
+      clean: true,
     },
     plugins: [
-      // 打包之前清空打包目录
-      new CleanWebpackPlugin(),
       // 打包分析
       new BundleAnalyzerPlugin(),
       // 去除 moment 多余语言包
