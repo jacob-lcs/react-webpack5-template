@@ -33,6 +33,9 @@ module.exports = () => {
         template: "./build/index.html",
       }),
     ],
+    resolve: {
+      extensions: ['.jsx', '.js', '.json', '.wasm']
+    },
     module: {
       rules: [
         {
