@@ -1,19 +1,16 @@
 import React from 'react'
 import { Statistic, Row, Col } from 'antd'
-import _ from 'lodash'
-import moment from 'moment'
-
+import { set } from 'lodash-es'
+import dayjs from 'dayjs'
 import './App.less';
 
 const { Countdown } = Statistic;
 
 const App = () => {
-  const deadline = moment.now() + 1000 * 60 * 60 * 24 * 2 + 1000 * 30;
-
+  const deadline = dayjs().unix() * 1000 + 1000 * 60 * 60 * 24 * 2 + 1000 * 30;
   const onFinish = () => {
     const a = {}
-    console.log('finished!');
-    _.set(a, 'finish', true)
+    set(a, 'finish', true)
   }
 
   return (

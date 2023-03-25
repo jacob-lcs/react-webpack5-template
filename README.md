@@ -3,9 +3,10 @@
 > 已集成功能
 > - [x] cache 缓存提升热更新速度
 > - [x] style module
-> - [x] lodash 按需加载
-> - [x] antd 按需加载
-> - [x] moment 去除多余语言包
+> - [x] HMR
+> - [x] lodash-es
+> - [x] antd v5
+> - [x] dayjs
 > 
 
 > 本文的示例项目源码可以点击 [这里](https://github.com/jacob-lcs/react-webpack5-template) 获取
