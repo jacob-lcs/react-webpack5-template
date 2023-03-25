@@ -1,6 +1,5 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const getCSSModuleLocalIdent = require("react-dev-utils/getCSSModuleLocalIdent");
 
 // css/css module 正则表达式
 const cssRegex = /\.css$/;
@@ -21,7 +20,7 @@ module.exports = () => {
     entry: {
       index: './src/index.js'
     },
-    target: ['web', 'es5'],
+    target: 'web',
     output: {
       // 打包文件根目录
       path: path.resolve(__dirname, "dist/"),
@@ -40,7 +39,7 @@ module.exports = () => {
       rules: [
         {
           test: /\.(jsx|js)?$/,
-          use: ["babel-loader"],
+          use: ["swc-loader"],
           include: path.resolve(__dirname, 'src'),
         },
         {
@@ -55,9 +54,7 @@ module.exports = () => {
             {
               loader: "css-loader",
               options: {
-                modules: {
-                  getLocalIdent: getCSSModuleLocalIdent,
-                }
+                modules: true
               }
             },
             "postcss-loader"
@@ -75,9 +72,7 @@ module.exports = () => {
             {
               loader: "css-loader",
               options: {
-                modules: {
-                  getLocalIdent: getCSSModuleLocalIdent,
-                }
+                modules: true
               }
             },
             "postcss-loader",
@@ -96,9 +91,7 @@ module.exports = () => {
             {
               loader: "css-loader",
               options: {
-                modules: {
-                  getLocalIdent: getCSSModuleLocalIdent,
-                }
+                modules: true
               }
             },
             "postcss-loader",
@@ -118,9 +111,7 @@ module.exports = () => {
             {
               loader: "css-loader",
               options: {
-                modules: {
-                  getLocalIdent: getCSSModuleLocalIdent,
-                }
+                modules: true
               }
             },
             "postcss-loader",
