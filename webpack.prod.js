@@ -15,7 +15,7 @@ module.exports = env => {
     },
     plugins: [
       // 打包分析
-      new BundleAnalyzerPlugin(),
+      // new BundleAnalyzerPlugin(),
       // 生成 manifest.json
       new WebpackManifestPlugin(),
       // 将 css 从 js 中分离
