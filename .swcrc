@@ -1,8 +1,9 @@
 {
   "jsc": {
     "parser": {
-      "syntax": "ecmascript",
-      "jsx": true
+      "syntax": "typescript",
+      "tsx": true,
+      "dynamicImport": true
     },
     "transform": {
       "react": {

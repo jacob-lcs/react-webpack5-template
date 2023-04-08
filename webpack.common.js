@@ -18,7 +18,7 @@ module.exports = () => {
   return {
     mode: "development",
     entry: {
-      index: './src/index.js'
+      index: './src/index.tsx'
     },
     target: 'web',
     output: {
@@ -33,12 +33,12 @@ module.exports = () => {
       }),
     ],
     resolve: {
-      extensions: ['.jsx', '.js', '.json', '.wasm']
+      extensions: ['.tsx', '.jsx', '.ts', '.js', '.json', '.wasm']
     },
     module: {
       rules: [
         {
-          test: /\.(jsx|js)?$/,
+          test: /\.(jsx|js|ts|tsx)?$/,
           use: ["swc-loader"],
           include: path.resolve(__dirname, 'src'),
         },
