@@ -49,7 +49,7 @@
     "stylus-loader": "^7.1.0",
     "swc-loader": "^0.2.3",
     "terser-webpack-plugin": "^5.3.7",
-    "thread-loader": "^3.0.4",
+    "thread-loader": "^4.0.0",
     "typescript": "^5.0.4",
     "webpack": "^5.78.0",
     "webpack-bundle-analyzer": "^4.8.0",
