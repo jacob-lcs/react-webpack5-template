@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const WebpackBar = require('webpackbar')
 
 // css/css module 正则表达式
 const cssRegex = /\.css$/;
@@ -31,6 +32,7 @@ module.exports = () => {
         filename: "index.html",
         template: "./build/index.html",
       }),
+      new WebpackBar()
     ],
     resolve: {
       extensions: ['.tsx', '.jsx', '.ts', '.js', '.json', '.wasm']
@@ -39,7 +41,7 @@ module.exports = () => {
       rules: [
         {
           test: /\.(jsx|js|ts|tsx)?$/,
-          use: ["swc-loader"],
+          use: ["thread-loader", "swc-loader"],
           include: path.resolve(__dirname, 'src'),
         },
         {
