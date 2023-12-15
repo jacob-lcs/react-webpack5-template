@@ -59,6 +59,6 @@
     "webpack-dev-server": "^4.13.3",
     "webpack-manifest-plugin": "^5.0.0",
     "webpack-merge": "^5.8.0",
-    "webpackbar": "^5.0.2"
+    "webpackbar": "^6.0.0"
   }
 }
