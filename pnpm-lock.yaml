@@ -80,8 +80,8 @@ devDependencies:
     specifier: ^1.62.0
     version: 1.62.0
   sass-loader:
-    specifier: ^13.2.2
-    version: 13.2.2(sass@1.62.0)(webpack@5.80.0)
+    specifier: ^14.0.0
+    version: 14.0.0(sass@1.62.0)(webpack@5.80.0)
   style-loader:
     specifier: ^3.3.2
     version: 3.3.2(webpack@5.80.0)
@@ -4839,18 +4839,15 @@ packages:
     resolution: {integrity: sha512-ZRwKbh/eQ6w9vmTjkuG0Ioi3HBwPFce0O+v//ve+aOq1oeCy7jMV2qzzAlpsNuqpqCBjjriM1lbtZbF/Q8jVyA==}
     dev: true
 
-  /sass-loader@13.2.2(sass@1.62.0)(webpack@5.80.0):
-    resolution: {integrity: sha512-nrIdVAAte3B9icfBiGWvmMhT/D+eCDwnk+yA7VE/76dp/WkHX+i44Q/pfo71NYbwj0Ap+PGsn0ekOuU1WFJ2AA==}
-    engines: {node: '>= 14.15.0'}
+  /sass-loader@14.0.0(sass@1.62.0)(webpack@5.80.0):
+    resolution: {integrity: sha512-oceP9wWbep/yRJ2+sMbCzk0UsXsDzdNis+N8nu9i5GwPXjy6v3DNB6TqfJLSpPO9k4+B8x8p/CEgjA9ZLkoLug==}
+    engines: {node: '>= 18.12.0'}
     peerDependencies:
-      fibers: '>= 3.1.0'
-      node-sass: ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
+      node-sass: ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0
       sass: ^1.3.0
       sass-embedded: '*'
       webpack: ^5.0.0
     peerDependenciesMeta:
-      fibers:
-        optional: true
       node-sass:
         optional: true
       sass:
@@ -4858,7 +4855,6 @@ packages:
       sass-embedded:
         optional: true
     dependencies:
-      klona: 2.0.6
       neo-async: 2.6.2
       sass: 1.62.0
       webpack: 5.80.0(@swc/core@1.3.53)(webpack-cli@5.0.2)
