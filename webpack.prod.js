@@ -5,13 +5,17 @@ const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserPlugin = require('terser-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const lightningcss = require('lightningcss');
+const browserslist = require('browserslist');
 
 module.exports = env => {
   return merge(common(env), {
     mode: 'production',
     output: {
-      filename: "js/[name].[contenthash].js",
       clean: true,
+      filename: 'js/[name].[contenthash].js',
+      chunkFilename: 'js/[name].[contenthash].js',
+      assetModuleFilename: 'assets/[name].[contenthash][ext]',
     },
     plugins: [
       // 打包分析
@@ -29,10 +33,29 @@ module.exports = env => {
         new TerserPlugin({
           parallel: true,
         }),
-        new CssMinimizerPlugin(),
+        new CssMinimizerPlugin({
+          minify: CssMinimizerPlugin.lightningCssMinify,
+          minimizerOptions: {
+            targets: lightningcss.browserslistToTargets(browserslist('>= 0.25%'))
+          },
+        }),
       ],
       splitChunks: {
-        chunks: 'async'
+        chunks: 'all',
+        cacheGroups: {
+          libAntd: {
+            test: /[\\/]node_modules[\\/]antd[\\/]/, // 匹配 antd 库
+            name: 'lib-antd', // 输出的文件名
+            priority: 20, // 优先级，数值越大优先级越高
+            reuseExistingChunk: true, // 复用已存在的 chunk
+          },
+          libLodash: {
+            test: /[\\/]node_modules[\\/]antd[\\/]/, // 匹配 antd 库
+            name: 'lib-lodash', // 输出的文件名
+            priority: 20, // 优先级，数值越大优先级越高
+            reuseExistingChunk: true, // 复用已存在的 chunk
+          },
+        },
       },
     },
   });

@@ -4,9 +4,6 @@ const common = require('./webpack.common.js');
 module.exports = env => {
   return merge(common(env), {
     mode: 'development',
-    output: {
-      filename: "js/[name].js",
-    },
     cache: {
       type: 'filesystem',
       // 可选配置
