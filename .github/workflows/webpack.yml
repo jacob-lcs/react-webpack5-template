@@ -21,10 +21,10 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Use Pnpm v8.1.1
+    - name: Use Pnpm v9.14.1
       uses: pnpm/action-setup@v2
       with:
-        version: 8.1.1
+        version: 9.14.1
 
     - name: Build
       run: |
