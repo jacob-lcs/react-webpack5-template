@@ -8,6 +8,7 @@
 > - [x] antd v5
 > - [x] dayjs
 > - [x] swc
+> - [x] lightningcss
 > 
 
 > 本文的示例项目源码可以点击 [这里](https://github.com/jacob-lcs/react-webpack5-template) 获取
