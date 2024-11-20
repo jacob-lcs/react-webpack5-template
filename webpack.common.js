@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const WebpackBar = require('webpackbar')
+const Dotenv = require('dotenv-webpack');
 
 // css/css module 正则表达式
 const cssRegex = /\.css$/;
@@ -32,7 +33,8 @@ module.exports = () => {
         filename: "index.html",
         template: "./build/index.html",
       }),
-      new WebpackBar()
+      new WebpackBar(),
+      new Dotenv()
     ],
     resolve: {
       extensions: ['.tsx', '.jsx', '.ts', '.js', '.json', '.wasm']
