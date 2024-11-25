@@ -50,7 +50,7 @@ importers:
         version: 7.1.2(webpack@5.96.1)
       css-minimizer-webpack-plugin:
         specifier: ^7.0.0
-        version: 7.0.0(lightningcss@1.28.1)(webpack@5.96.1)
+        version: 7.0.0(lightningcss@1.28.2)(webpack@5.96.1)
       dotenv-webpack:
         specifier: ^8.1.0
         version: 8.1.0(webpack@5.96.1)
@@ -65,7 +65,7 @@ importers:
         version: 12.2.0(less@4.2.0)(webpack@5.96.1)
       lightningcss:
         specifier: ^1.28.1
-        version: 1.28.1
+        version: 1.28.2
       mini-css-extract-plugin:
         specifier: ^2.9.2
         version: 2.9.2(webpack@5.96.1)
@@ -1895,68 +1895,68 @@ packages:
     engines: {node: '>=6'}
     hasBin: true
 
-  lightningcss-darwin-arm64@1.28.1:
-    resolution: {integrity: sha512-VG3vvzM0m/rguCdm76DdobNeNJnHK+jWcdkNLFWHLh9YCotRvbRIt45JxwcHlIF8TDqWStVLTdghq5NaigVCBQ==}
+  lightningcss-darwin-arm64@1.28.2:
+    resolution: {integrity: sha512-/8cPSqZiusHSS+WQz0W4NuaqFjquys1x+NsdN/XOHb+idGHJSoJ7SoQTVl3DZuAgtPZwFZgRfb/vd1oi8uX6+g==}
     engines: {node: '>= 12.0.0'}
     cpu: [arm64]
     os: [darwin]
 
-  lightningcss-darwin-x64@1.28.1:
-    resolution: {integrity: sha512-O7ORdislvKfMohFl4Iq7fxKqdJOuuxArcglVI3amuFO5DJ0wfV3Gxgi1JRo49slfr7OVzJQEHLG4muTWYM5cTQ==}
+  lightningcss-darwin-x64@1.28.2:
+    resolution: {integrity: sha512-R7sFrXlgKjvoEG8umpVt/yutjxOL0z8KWf0bfPT3cYMOW4470xu5qSHpFdIOpRWwl3FKNMUdbKtMUjYt0h2j4g==}
     engines: {node: '>= 12.0.0'}
     cpu: [x64]
     os: [darwin]
 
-  lightningcss-freebsd-x64@1.28.1:
-    resolution: {integrity: sha512-b7sF89B31kYYijxVcFO7l5u6UNA862YstNu+3YbLl/IQKzveL4a5cwR5cdpG+OOhErg/c2u9WCmzZoX2I5GBvw==}
+  lightningcss-freebsd-x64@1.28.2:
+    resolution: {integrity: sha512-l2qrCT+x7crAY+lMIxtgvV10R8VurzHAoUZJaVFSlHrN8kRLTvEg9ObojIDIexqWJQvJcVVV3vfzsEynpiuvgA==}
     engines: {node: '>= 12.0.0'}
     cpu: [x64]
     os: [freebsd]
 
-  lightningcss-linux-arm-gnueabihf@1.28.1:
-    resolution: {integrity: sha512-p61kXwvhUDLLzkWHjzSFfUBW/F0iy3jr3CWi3k8SKULtJEsJXTI9DqRm9EixxMSe2AMBQBt4auTYiQL4B1N51A==}
+  lightningcss-linux-arm-gnueabihf@1.28.2:
+    resolution: {integrity: sha512-DKMzpICBEKnL53X14rF7hFDu8KKALUJtcKdFUCW5YOlGSiwRSgVoRjM97wUm/E0NMPkzrTi/rxfvt7ruNK8meg==}
     engines: {node: '>= 12.0.0'}
     cpu: [arm]
     os: [linux]
 
-  lightningcss-linux-arm64-gnu@1.28.1:
-    resolution: {integrity: sha512-iO+fN9hOMmzfwqcG2/BgUtMKD48H2JO/SXU44fyIwpY2veb65QF5xiRrQ9l1FwIxbGK3231KBYCtAqv+xf+NsQ==}
+  lightningcss-linux-arm64-gnu@1.28.2:
+    resolution: {integrity: sha512-nhfjYkfymWZSxdtTNMWyhFk2ImUm0X7NAgJWFwnsYPOfmtWQEapzG/DXZTfEfMjSzERNUNJoQjPAbdqgB+sjiw==}
     engines: {node: '>= 12.0.0'}
     cpu: [arm64]
     os: [linux]
 
-  lightningcss-linux-arm64-musl@1.28.1:
-    resolution: {integrity: sha512-dnMHeXEmCUzHHZjaDpQBYuBKcN9nPC3nPFKl70bcj5Bkn5EmkcgEqm5p035LKOgvAwk1XwLpQCML6pXmCwz0NQ==}
+  lightningcss-linux-arm64-musl@1.28.2:
+    resolution: {integrity: sha512-1SPG1ZTNnphWvAv8RVOymlZ8BDtAg69Hbo7n4QxARvkFVCJAt0cgjAw1Fox0WEhf4PwnyoOBaVH0Z5YNgzt4dA==}
     engines: {node: '>= 12.0.0'}
     cpu: [arm64]
     os: [linux]
 
-  lightningcss-linux-x64-gnu@1.28.1:
-    resolution: {integrity: sha512-7vWDISaMUn+oo2TwRdf2hl/BLdPxvywv9JKEqNZB/0K7bXwV4XE9wN/C2sAp1gGuh6QBA8lpjF4JIPt3HNlCHA==}
+  lightningcss-linux-x64-gnu@1.28.2:
+    resolution: {integrity: sha512-ZhQy0FcO//INWUdo/iEdbefntTdpPVQ0XJwwtdbBuMQe+uxqZoytm9M+iqR9O5noWFaxK+nbS2iR/I80Q2Ofpg==}
     engines: {node: '>= 12.0.0'}
     cpu: [x64]
     os: [linux]
 
-  lightningcss-linux-x64-musl@1.28.1:
-    resolution: {integrity: sha512-IHCu9tVGP+x5BCpA2rF3D04DBokcBza/a8AuHQU+1AiMKubuMegPwcL7RatBgK4ztFHeYnnD5NdhwhRfYMAtNA==}
+  lightningcss-linux-x64-musl@1.28.2:
+    resolution: {integrity: sha512-alb/j1NMrgQmSFyzTbN1/pvMPM+gdDw7YBuQ5VSgcFDypN3Ah0BzC2dTZbzwzaMdUVDszX6zH5MzjfVN1oGuww==}
     engines: {node: '>= 12.0.0'}
     cpu: [x64]
     os: [linux]
 
-  lightningcss-win32-arm64-msvc@1.28.1:
-    resolution: {integrity: sha512-Erm72kHmMg/3h350PTseskz+eEGBM17Fuu79WW2Qqt0BfWSF1jHHc12lkJCWMYl5jcBHPs5yZdgNHtJ7IJS3Uw==}
+  lightningcss-win32-arm64-msvc@1.28.2:
+    resolution: {integrity: sha512-WnwcjcBeAt0jGdjlgbT9ANf30pF0C/QMb1XnLnH272DQU8QXh+kmpi24R55wmWBwaTtNAETZ+m35ohyeMiNt+g==}
     engines: {node: '>= 12.0.0'}
     cpu: [arm64]
     os: [win32]
 
-  lightningcss-win32-x64-msvc@1.28.1:
-    resolution: {integrity: sha512-ZPQtvx+uQBzrSdHH8p4H3M9Alue+x369TPZAA3b4K3d92FPhpZCuBG04+HQzspam9sVeID9mI6f3VRAs2ezaEA==}
+  lightningcss-win32-x64-msvc@1.28.2:
+    resolution: {integrity: sha512-3piBifyT3avz22o6mDKywQC/OisH2yDK+caHWkiMsF82i3m5wDBadyCjlCQ5VNgzYkxrWZgiaxHDdd5uxsi0/A==}
     engines: {node: '>= 12.0.0'}
     cpu: [x64]
     os: [win32]
 
-  lightningcss@1.28.1:
-    resolution: {integrity: sha512-KRDkHlLlNj3DWh79CDt93fPlRJh2W1AuHV0ZSZAMMuN7lqlsZTV5842idfS1urWG8q9tc17velp1gCXhY7sLnQ==}
+  lightningcss@1.28.2:
+    resolution: {integrity: sha512-ePLRrbt3fgjXI5VFZOLbvkLD5ZRuxGKm+wJ3ujCqBtL3NanDHPo/5zicR5uEKAPiIjBYF99BM4K4okvMznjkVA==}
     engines: {node: '>= 12.0.0'}
 
   lilconfig@3.1.2:
@@ -4648,7 +4648,7 @@ snapshots:
     optionalDependencies:
       webpack: 5.96.1(@swc/core@1.9.3)(webpack-cli@5.1.4)
 
-  css-minimizer-webpack-plugin@7.0.0(lightningcss@1.28.1)(webpack@5.96.1):
+  css-minimizer-webpack-plugin@7.0.0(lightningcss@1.28.2)(webpack@5.96.1):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.25
       cssnano: 7.0.6(postcss@8.4.49)
@@ -4658,7 +4658,7 @@ snapshots:
       serialize-javascript: 6.0.2
       webpack: 5.96.1(@swc/core@1.9.3)(webpack-cli@5.1.4)
     optionalDependencies:
-      lightningcss: 1.28.1
+      lightningcss: 1.28.2
 
   css-prefers-color-scheme@10.0.0(postcss@8.4.49):
     dependencies:
@@ -5306,50 +5306,50 @@ snapshots:
       needle: 3.3.1
       source-map: 0.6.1
 
-  lightningcss-darwin-arm64@1.28.1:
+  lightningcss-darwin-arm64@1.28.2:
     optional: true
 
-  lightningcss-darwin-x64@1.28.1:
+  lightningcss-darwin-x64@1.28.2:
     optional: true
 
-  lightningcss-freebsd-x64@1.28.1:
+  lightningcss-freebsd-x64@1.28.2:
     optional: true
 
-  lightningcss-linux-arm-gnueabihf@1.28.1:
+  lightningcss-linux-arm-gnueabihf@1.28.2:
     optional: true
 
-  lightningcss-linux-arm64-gnu@1.28.1:
+  lightningcss-linux-arm64-gnu@1.28.2:
     optional: true
 
-  lightningcss-linux-arm64-musl@1.28.1:
+  lightningcss-linux-arm64-musl@1.28.2:
     optional: true
 
-  lightningcss-linux-x64-gnu@1.28.1:
+  lightningcss-linux-x64-gnu@1.28.2:
     optional: true
 
-  lightningcss-linux-x64-musl@1.28.1:
+  lightningcss-linux-x64-musl@1.28.2:
     optional: true
 
-  lightningcss-win32-arm64-msvc@1.28.1:
+  lightningcss-win32-arm64-msvc@1.28.2:
     optional: true
 
-  lightningcss-win32-x64-msvc@1.28.1:
+  lightningcss-win32-x64-msvc@1.28.2:
     optional: true
 
-  lightningcss@1.28.1:
+  lightningcss@1.28.2:
     dependencies:
       detect-libc: 1.0.3
     optionalDependencies:
-      lightningcss-darwin-arm64: 1.28.1
-      lightningcss-darwin-x64: 1.28.1
-      lightningcss-freebsd-x64: 1.28.1
-      lightningcss-linux-arm-gnueabihf: 1.28.1
-      lightningcss-linux-arm64-gnu: 1.28.1
-      lightningcss-linux-arm64-musl: 1.28.1
-      lightningcss-linux-x64-gnu: 1.28.1
-      lightningcss-linux-x64-musl: 1.28.1
-      lightningcss-win32-arm64-msvc: 1.28.1
-      lightningcss-win32-x64-msvc: 1.28.1
+      lightningcss-darwin-arm64: 1.28.2
+      lightningcss-darwin-x64: 1.28.2
+      lightningcss-freebsd-x64: 1.28.2
+      lightningcss-linux-arm-gnueabihf: 1.28.2
+      lightningcss-linux-arm64-gnu: 1.28.2
+      lightningcss-linux-arm64-musl: 1.28.2
+      lightningcss-linux-x64-gnu: 1.28.2
+      lightningcss-linux-x64-musl: 1.28.2
+      lightningcss-win32-arm64-msvc: 1.28.2
+      lightningcss-win32-x64-msvc: 1.28.2
 
   lilconfig@3.1.2: {}
 
