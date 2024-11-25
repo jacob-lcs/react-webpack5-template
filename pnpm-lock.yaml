@@ -59,10 +59,10 @@ importers:
         version: 5.6.3(webpack@5.96.1)
       less:
         specifier: ^4.2.0
-        version: 4.2.0
+        version: 4.2.1
       less-loader:
         specifier: ^12.2.0
-        version: 12.2.0(less@4.2.0)(webpack@5.96.1)
+        version: 12.2.0(less@4.2.1)(webpack@5.96.1)
       lightningcss:
         specifier: ^1.28.1
         version: 1.28.1
@@ -1890,8 +1890,8 @@ packages:
       webpack:
         optional: true
 
-  less@4.2.0:
-    resolution: {integrity: sha512-P3b3HJDBtSzsXUl0im2L7gTO5Ubg8mEN6G8qoTS77iXxXX4Hvu4Qj540PZDvQ8V6DmX6iXo98k7Md0Cm1PrLaA==}
+  less@4.2.1:
+    resolution: {integrity: sha512-CasaJidTIhWmjcqv0Uj5vccMI7pJgfD9lMkKtlnTHAdJdYK/7l8pM9tumLyJ0zhbD4KJLo/YvTj+xznQd5NBhg==}
     engines: {node: '>=6'}
     hasBin: true
 
@@ -5286,13 +5286,13 @@ snapshots:
       picocolors: 1.1.1
       shell-quote: 1.8.1
 
-  less-loader@12.2.0(less@4.2.0)(webpack@5.96.1):
+  less-loader@12.2.0(less@4.2.1)(webpack@5.96.1):
     dependencies:
-      less: 4.2.0
+      less: 4.2.1
     optionalDependencies:
       webpack: 5.96.1(@swc/core@1.9.3)(webpack-cli@5.1.4)
 
-  less@4.2.0:
+  less@4.2.1:
     dependencies:
       copy-anything: 2.0.6
       parse-node-version: 1.0.1
