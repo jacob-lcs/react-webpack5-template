@@ -1,7 +1,11 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const WebpackBar = require('webpackbar')
-const Dotenv = require('dotenv-webpack');
+const WebpackBar = require("webpackbar");
+const Dotenv = require("dotenv-webpack");
+const {
+  defineReactCompilerLoaderOption,
+  reactCompilerLoader,
+} = require("react-compiler-webpack");
 
 // css/css module 正则表达式
 const cssRegex = /\.css$/;
@@ -20,9 +24,9 @@ module.exports = () => {
   return {
     mode: "development",
     entry: {
-      index: './src/index.tsx'
+      index: "./src/index.tsx",
     },
-    target: 'web',
+    target: "web",
     output: {
       // 打包文件根目录
       path: path.resolve(__dirname, "dist/"),
@@ -34,22 +38,31 @@ module.exports = () => {
         template: "./build/index.html",
       }),
       new WebpackBar(),
-      new Dotenv()
+      new Dotenv(),
     ],
     resolve: {
-      extensions: ['.tsx', '.jsx', '.ts', '.js', '.json', '.wasm']
+      extensions: [".tsx", ".jsx", ".ts", ".js", ".json", ".wasm"],
     },
     module: {
       rules: [
         {
           test: /\.(jsx|js|ts|tsx)?$/,
-          use: ["thread-loader", "swc-loader"],
-          include: path.resolve(__dirname, 'src'),
+          use: [
+            "thread-loader",
+            "swc-loader",
+            {
+              loader: reactCompilerLoader,
+              options: defineReactCompilerLoaderOption({
+                // React Compiler options goes here
+              }),
+            },
+          ],
+          include: path.resolve(__dirname, "src"),
         },
         {
           test: cssRegex,
           exclude: cssModuleRegex,
-          use: ["style-loader", "css-loader", "postcss-loader"]
+          use: ["style-loader", "css-loader", "postcss-loader"],
         },
         {
           test: cssModuleRegex,
@@ -58,16 +71,16 @@ module.exports = () => {
             {
               loader: "css-loader",
               options: {
-                modules: true
-              }
+                modules: true,
+              },
             },
-            "postcss-loader"
-          ]
+            "postcss-loader",
+          ],
         },
         {
           test: sassRegex,
           exclude: sassModuleRegex,
-          use: ["style-loader", "css-loader", "postcss-loader", "sass-loader"]
+          use: ["style-loader", "css-loader", "postcss-loader", "sass-loader"],
         },
         {
           test: sassModuleRegex,
@@ -76,17 +89,22 @@ module.exports = () => {
             {
               loader: "css-loader",
               options: {
-                modules: true
-              }
+                modules: true,
+              },
             },
             "postcss-loader",
-            "sass-loader"
-          ]
+            "sass-loader",
+          ],
         },
         {
           test: stylRegex,
           exclude: stylModuleRegex,
-          use: ["style-loader", "css-loader", "postcss-loader", "stylus-loader"]
+          use: [
+            "style-loader",
+            "css-loader",
+            "postcss-loader",
+            "stylus-loader",
+          ],
         },
         {
           test: stylModuleRegex,
@@ -95,12 +113,12 @@ module.exports = () => {
             {
               loader: "css-loader",
               options: {
-                modules: true
-              }
+                modules: true,
+              },
             },
             "postcss-loader",
-            "stylus-loader"
-          ]
+            "stylus-loader",
+          ],
         },
         {
           test: lessRegex,
@@ -115,18 +133,18 @@ module.exports = () => {
             {
               loader: "css-loader",
               options: {
-                modules: true
-              }
+                modules: true,
+              },
             },
             "postcss-loader",
-            "less-loader"
+            "less-loader",
           ],
         },
         {
           test: /\.(jpe?g|png|gif|svg|woff|woff2|eot|ttf|otf)$/i,
           type: "asset/resource",
         },
-      ]
+      ],
     },
-  }
-}
+  };
+};
