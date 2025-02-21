@@ -40,7 +40,7 @@
     "eslint": "^9.16.0",
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-react-compiler": "19.0.0-beta-e552027-20250112",
-    "globals": "^15.13.0",
+    "globals": "^16.0.0",
     "html-webpack-plugin": "^5.6.3",
     "less": "^4.2.0",
     "less-loader": "^12.2.0",
