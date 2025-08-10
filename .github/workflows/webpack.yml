@@ -24,7 +24,7 @@ jobs:
     - name: Use Pnpm v9.14.1
       uses: pnpm/action-setup@v2
       with:
-        version: 9.14.1
+        version: 9.15.9
 
     - name: Build
       run: |
