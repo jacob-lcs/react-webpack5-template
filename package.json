@@ -51,7 +51,7 @@
     "postcss-loader": "^8.1.1",
     "postcss-normalize": "^13.0.1",
     "postcss-preset-env": "^10.1.1",
-    "react-compiler-webpack": "^0.1.2",
+    "react-compiler-webpack": "^1.0.0",
     "resolve-url-loader": "^5.0.0",
     "sass": "^1.81.0",
     "sass-loader": "^16.0.3",
