@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x, 20.x]
+        node-version: [22.x]
 
     steps:
     - uses: actions/checkout@v5
@@ -21,7 +21,7 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Use Pnpm v9.14.1
+    - name: Use Pnpm v10.18.0
       uses: pnpm/action-setup@v2
       with:
         version: 10.18.0
