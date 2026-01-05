@@ -42,6 +42,9 @@ module.exports = () => {
     ],
     resolve: {
       extensions: [".tsx", ".jsx", ".ts", ".js", ".json", ".wasm"],
+      alias: {
+        "@": path.resolve(__dirname, "src"),
+      },
     },
     module: {
       rules: [
