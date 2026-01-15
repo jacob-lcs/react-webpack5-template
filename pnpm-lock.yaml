@@ -38,7 +38,7 @@ importers:
         version: 4.17.12
       '@types/node':
         specifier: ^25.0.3
-        version: 25.0.4
+        version: 25.0.9
       '@types/react':
         specifier: ^19.2.7
         version: 19.2.7
@@ -323,6 +323,10 @@ packages:
 
   '@babel/types@7.28.5':
     resolution: {integrity: sha512-qQ5m48eI/MFLQ5PxQj4PFaprjyCTLI37ElWMmNs0K8Lk3dVeOdNpB3ks8jc7yM5CDmVC73eMVk/trk3fgmrUpA==}
+    engines: {node: '>=6.9.0'}
+
+  '@babel/types@7.28.6':
+    resolution: {integrity: sha512-0ZrskXVEHSWIqZM/sQZ4EV3jZJXRkio/WCxaqKZP1g//CEWEPSfeZFcms4XeKBCHU0ZKnIkdJeU/kF+eRp5lBg==}
     engines: {node: '>=6.9.0'}
 
   '@csstools/cascade-layer-name-parser@2.0.5':
@@ -1318,8 +1322,8 @@ packages:
   '@types/node-forge@1.3.14':
     resolution: {integrity: sha512-mhVF2BnD4BO+jtOp7z1CdzaK4mbuK0LLQYAvdOLqHTavxFNq4zA1EmYkpnFjP8HOUzedfQkRnp0E2ulSAYSzAw==}
 
-  '@types/node@25.0.4':
-    resolution: {integrity: sha512-9L7EOcoPf2mpvBL6GbE4z6zY9oaaP389dZ5ZZ05n2K9p3e1rEUwcXqwhXIKRMbK/uV1U8MYactPf1XH0xmtZWg==}
+  '@types/node@25.0.9':
+    resolution: {integrity: sha512-/rpCXHlCWeqClNBwUhDcusJxXYDjZTyE8v5oTO7WbL8eij2nKhUeU89/6xgjU7N4/Vh3He0BtyhJdQbDyhiXAw==}
 
   '@types/qs@6.14.0':
     resolution: {integrity: sha512-eOunJqu0K1923aExK6y8p6fsihYEn/BYuQ4g0CxAAgFc4b/ZLN4CrsRZ55srTdqoiLzU2B2evC+apEIxprEzkQ==}
@@ -4645,6 +4649,11 @@ snapshots:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.28.5
 
+  '@babel/types@7.28.6':
+    dependencies:
+      '@babel/helper-string-parser': 7.27.1
+      '@babel/helper-validator-identifier': 7.28.5
+
   '@csstools/cascade-layer-name-parser@2.0.5(@csstools/css-parser-algorithms@3.0.5(@csstools/css-tokenizer@3.0.4))(@csstools/css-tokenizer@3.0.4)':
     dependencies:
       '@csstools/css-parser-algorithms': 3.0.5(@csstools/css-tokenizer@3.0.4)
@@ -5032,7 +5041,7 @@ snapshots:
 
   '@jest/pattern@30.0.1':
     dependencies:
-      '@types/node': 25.0.4
+      '@types/node': 25.0.9
       jest-regex-util: 30.0.1
 
   '@jest/schemas@30.0.5':
@@ -5045,7 +5054,7 @@ snapshots:
       '@jest/schemas': 30.0.5
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
-      '@types/node': 25.0.4
+      '@types/node': 25.0.9
       '@types/yargs': 17.0.35
       chalk: 4.1.2
 
@@ -5605,20 +5614,20 @@ snapshots:
   '@types/body-parser@1.19.6':
     dependencies:
       '@types/connect': 3.4.38
-      '@types/node': 25.0.4
+      '@types/node': 25.0.9
 
   '@types/bonjour@3.5.13':
     dependencies:
-      '@types/node': 25.0.4
+      '@types/node': 25.0.9
 
   '@types/connect-history-api-fallback@1.5.4':
     dependencies:
       '@types/express-serve-static-core': 4.19.7
-      '@types/node': 25.0.4
+      '@types/node': 25.0.9
 
   '@types/connect@3.4.38':
     dependencies:
-      '@types/node': 25.0.4
+      '@types/node': 25.0.9
 
   '@types/eslint-scope@3.7.7':
     dependencies:
@@ -5634,7 +5643,7 @@ snapshots:
 
   '@types/express-serve-static-core@4.19.7':
     dependencies:
-      '@types/node': 25.0.4
+      '@types/node': 25.0.9
       '@types/qs': 6.14.0
       '@types/range-parser': 1.2.7
       '@types/send': 1.2.1
@@ -5652,7 +5661,7 @@ snapshots:
 
   '@types/http-proxy@1.17.17':
     dependencies:
-      '@types/node': 25.0.4
+      '@types/node': 25.0.9
 
   '@types/istanbul-lib-coverage@2.0.6': {}
 
@@ -5676,9 +5685,9 @@ snapshots:
 
   '@types/node-forge@1.3.14':
     dependencies:
-      '@types/node': 25.0.4
+      '@types/node': 25.0.9
 
-  '@types/node@25.0.4':
+  '@types/node@25.0.9':
     dependencies:
       undici-types: 7.16.0
 
@@ -5699,11 +5708,11 @@ snapshots:
   '@types/send@0.17.6':
     dependencies:
       '@types/mime': 1.3.5
-      '@types/node': 25.0.4
+      '@types/node': 25.0.9
 
   '@types/send@1.2.1':
     dependencies:
-      '@types/node': 25.0.4
+      '@types/node': 25.0.9
 
   '@types/serve-index@1.9.4':
     dependencies:
@@ -5712,16 +5721,16 @@ snapshots:
   '@types/serve-static@1.15.10':
     dependencies:
       '@types/http-errors': 2.0.5
-      '@types/node': 25.0.4
+      '@types/node': 25.0.9
       '@types/send': 0.17.6
 
   '@types/sockjs@0.3.36':
     dependencies:
-      '@types/node': 25.0.4
+      '@types/node': 25.0.9
 
   '@types/ws@8.18.1':
     dependencies:
-      '@types/node': 25.0.4
+      '@types/node': 25.0.9
 
   '@types/yargs-parser@21.0.3': {}
 
@@ -6122,7 +6131,7 @@ snapshots:
 
   babel-plugin-react-compiler@1.0.0:
     dependencies:
-      '@babel/types': 7.28.5
+      '@babel/types': 7.28.6
 
   balanced-match@1.0.2: {}
 
@@ -7392,7 +7401,7 @@ snapshots:
   jest-util@30.2.0:
     dependencies:
       '@jest/types': 30.2.0
-      '@types/node': 25.0.4
+      '@types/node': 25.0.9
       chalk: 4.1.2
       ci-info: 4.3.1
       graceful-fs: 4.2.11
@@ -7400,13 +7409,13 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 25.0.4
+      '@types/node': 25.0.9
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
   jest-worker@30.2.0:
     dependencies:
-      '@types/node': 25.0.4
+      '@types/node': 25.0.9
       '@ungap/structured-clone': 1.3.0
       jest-util: 30.2.0
       merge-stream: 2.0.0
