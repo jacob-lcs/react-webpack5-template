@@ -24,7 +24,7 @@ jobs:
     - name: Use Pnpm v10.18.0
       uses: pnpm/action-setup@v2
       with:
-        version: 10.18.0
+        version: 10.29.1
 
     - name: Build
       run: |
