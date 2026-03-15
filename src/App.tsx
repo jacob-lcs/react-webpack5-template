@@ -13,30 +13,36 @@ const App = () => {
 
   return (
     <div className="container">
-      <Row gutter={16} className="time">
+      <Row gutter={16} className="time" data-testid="timer-grid">
         <Col span={12}>
-          <Statistic.Timer
-            type="countdown"
-            title="Countdown"
-            value={deadline}
-            onFinish={onFinish}
-          />
+          <div data-testid="timer-countdown">
+            <Statistic.Timer
+              type="countdown"
+              title="Countdown"
+              value={deadline}
+              onFinish={onFinish}
+            />
+          </div>
         </Col>
         <Col span={12}>
-          <Statistic.Timer
-            type="countdown"
-            title="Million Seconds"
-            value={deadline}
-            format="HH:mm:ss:SSS"
-          />
+          <div data-testid="timer-millis">
+            <Statistic.Timer
+              type="countdown"
+              title="Million Seconds"
+              value={deadline}
+              format="HH:mm:ss:SSS"
+            />
+          </div>
         </Col>
         <Col span={24} style={{ marginTop: 32 }}>
-          <Statistic.Timer
-            type="countdown"
-            title="Day Level"
-            value={deadline}
-            format="D 天 H 时 m 分 s 秒"
-          />
+          <div data-testid="timer-day">
+            <Statistic.Timer
+              type="countdown"
+              title="Day Level"
+              value={deadline}
+              format="D 天 H 时 m 分 s 秒"
+            />
+          </div>
         </Col>
       </Row>
     </div>

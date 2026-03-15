@@ -1,7 +1,5 @@
 const { merge } = require("webpack-merge");
 const common = require("./webpack.common.js");
-const BundleAnalyzerPlugin =
-  require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 const { WebpackManifestPlugin } = require("webpack-manifest-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
@@ -19,8 +17,6 @@ module.exports = (env) => {
       assetModuleFilename: "assets/[name].[contenthash][ext]",
     },
     plugins: [
-      // 打包分析
-      // new BundleAnalyzerPlugin(),
       // 生成 manifest.json
       new WebpackManifestPlugin(),
       // 将 css 从 js 中分离
@@ -37,9 +33,7 @@ module.exports = (env) => {
         new CssMinimizerPlugin({
           minify: CssMinimizerPlugin.lightningCssMinify,
           minimizerOptions: {
-            targets: lightningcss.browserslistToTargets(
-              browserslist(">= 0.25%")
-            ),
+            targets: lightningcss.browserslistToTargets(browserslist()),
           },
         }),
       ],

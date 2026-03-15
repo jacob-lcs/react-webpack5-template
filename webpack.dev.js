@@ -14,8 +14,8 @@ module.exports = (env) => {
       name: "development-cache", // 配置以name为隔离，创建不同的缓存文件，如生成PC或mobile不同的配置缓存
     },
     devServer: {
-      port: 8081,
-      host: "0.0.0.0",
+      port: Number(env?.port || process.env.PORT || 8081),
+      host: env?.host || process.env.HOST || "0.0.0.0",
       allowedHosts: "all",
     },
     plugins: [new ReactRefreshWebpackPlugin()],

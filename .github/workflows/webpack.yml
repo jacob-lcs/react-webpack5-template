@@ -1,4 +1,4 @@
-name: NodeJS with Webpack
+name: CI
 
 on:
   push:
@@ -10,23 +10,34 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [22.x]
-
     steps:
     - uses: actions/checkout@v6
 
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Use Node.js 24.x
       uses: actions/setup-node@v6
       with:
-        node-version: ${{ matrix.node-version }}
-    - name: Use Pnpm v10.18.0
+        node-version: 24.x
+        cache: pnpm
+
+    - name: Use pnpm 10.18.3
       uses: pnpm/action-setup@v2
       with:
-        version: 10.18.0
+        version: 10.18.3
+
+    - name: Install dependencies
+      run: pnpm install --frozen-lockfile
+
+    - name: Install Playwright browser
+      run: pnpm exec playwright install --with-deps chromium
+
+    - name: Lint
+      run: pnpm lint
+
+    - name: Typecheck
+      run: pnpm typecheck
 
     - name: Build
-      run: |
-        pnpm install
-        pnpm build
+      run: pnpm build
+
+    - name: End-to-end tests
+      run: pnpm test:e2e
